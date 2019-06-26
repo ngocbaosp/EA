@@ -1,0 +1,7 @@
+jdbcSettings:
+  url: "jdbc:mysql://localhost:3306/simpsons?useSSL=false&amp;serverTimezone=UTC"
+  username: "ea"
+  password: "ea@12345"
+  driverClassName: "com.mysql.jdbc.Driver"
+
+packageName: "edu.mum.cs544"
