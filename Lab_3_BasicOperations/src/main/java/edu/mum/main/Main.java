@@ -74,6 +74,13 @@ public class Main {
         ////////////////////////////////
         app.updateUser(userService);
 
+        ////////////////////////////////
+        userService.flushTest();
+
+        ////////////////////////////////
+        userService.refeshTest();
+
+
 
     }
 

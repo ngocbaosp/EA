@@ -13,4 +13,8 @@ public interface UserService {
 
 	public User update(User user);
 
+	public void flushTest();
+	public void refeshTest();
+
+
 }
