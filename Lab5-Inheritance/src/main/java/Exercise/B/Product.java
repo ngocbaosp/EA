@@ -3,6 +3,7 @@ package Exercise.B;
 import javax.persistence.*;
 
 @Entity
+//@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @Inheritance(strategy = InheritanceType.JOINED)
 public class Product {
     @Id
