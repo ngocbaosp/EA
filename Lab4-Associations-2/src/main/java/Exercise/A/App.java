@@ -1,0 +1,53 @@
+package Exercise.A;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+import javax.persistence.TypedQuery;
+import java.util.List;
+
+public class App {
+
+    private static EntityManagerFactory emf;
+
+    public static void main(String[] args) throws Exception {
+        emf = Persistence.createEntityManagerFactory("cs544");
+
+
+        EntityManager em = emf.createEntityManager();
+        em.getTransaction().begin();
+
+        Employee employee1 = new Employee("Quy1", "quy1@mum.edu");
+        Employee employee2 = new Employee("Quy2", "quy2@mum.edu");
+        Employee employee3 = new Employee("Quy3", "quy3@mum.edu");
+
+        Department department1 = new Department("HR");
+        Department department2 = new Department("IT");
+
+        department1.addEmployee(employee1);
+        department1.addEmployee(employee2);
+
+        department2.addEmployee(employee3);
+
+
+        em.persist(employee1);
+        em.persist(employee2);
+        em.persist(employee3);
+
+        em.persist(department1);
+        em.persist(department2);
+
+
+        TypedQuery<Department> qry = em.createQuery("from Department", Department.class);
+
+        List<Department> result = qry.getResultList();
+
+        System.out.println(result);
+
+
+        em.getTransaction().commit();
+        em.close();
+
+
+    }
+}
