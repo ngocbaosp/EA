@@ -1,8 +1,8 @@
-package Exercise.A;
+package Exercise.B;
 
 import javax.persistence.*;
 
-//@Entity
+@Entity
 public class OrderLine {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

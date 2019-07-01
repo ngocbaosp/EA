@@ -1,4 +1,4 @@
-package Exercise.A;
+package Exercise.B;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -18,11 +18,11 @@ public class App {
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
 
-        Product product1 = new Product("EA Book", "EA Book");
-        Product product2 = new Product("Alg Book", "Alg Book");
+        Product product1 = new Book("EA Book", "EA Book","This is a EA book");
+        Product product2 = new Book("Alg Book", "Alg Book","This is a Alg book");
 
-        Product product3 = new Product("CD 01", "CD 01");
-        Product product4 = new Product("CD 02", "CD 02");
+        Product product3 = new CD("CD 01", "CD 01","Art01");
+        Product product4 = new CD("CD 02", "CD 02","Art02");
 
 
         OrderLine orderLine1 = new OrderLine(1);

@@ -1,12 +1,11 @@
-package Exercise.A;
+package Exercise.B;
 
 import javax.persistence.*;
-import java.awt.*;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-//@Entity
+@Entity
 @Table(name="Orders")
 public class Order {
 
