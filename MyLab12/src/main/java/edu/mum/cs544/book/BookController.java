@@ -37,9 +37,9 @@ public class BookController {
     }
 
     @GetMapping("/books/add")
-    public String viewAdd(@ModelAttribute Book car, Model model) {
+    public String viewAdd(@ModelAttribute Book book, Model model) {
         model.addAttribute("msg", "Add");
-        return "bookDetail";
+        return "bookForm";
     }
 
     @GetMapping("/books/{id}")
