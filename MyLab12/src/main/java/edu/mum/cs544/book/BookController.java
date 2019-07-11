@@ -20,6 +20,13 @@ public class BookController {
         return "redirect:/books";
     }
 
+    /*
+    @GetMapping("/login")
+    public String myLogin(Model model) {
+        //model.addAttribute("books", bookService.getAll());
+        return "mylogin";
+    }*/
+
     @GetMapping("/books")
     public String getAll(Model model) {
         model.addAttribute("books", bookService.getAll());
