@@ -1,0 +1,38 @@
+package server.demo.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+import server.demo.domain.Person;
+import server.demo.repository.PersonRepository;
+
+import java.util.List;
+
+@Service
+@Transactional
+public class PersonServiceImpl implements IPersonService {
+
+    @Autowired
+    private PersonRepository personRepository;
+    @Override
+    public List<Person> getAll() {
+        return personRepository.findAll();
+    }
+    @Override
+    public Person getOne(Long id) {
+        return personRepository.findById(id).get();
+    }
+    @Override
+    public Long addPerson(Person person) {
+        personRepository.save(person);
+        return person.getId();
+    }
+    @Override
+    public void updatePerson(Person person) {
+        personRepository.save(person);
+    }
+    @Override
+    public void deletePerson(Long id) {
+        personRepository.deleteById(id);
+    }
+}
