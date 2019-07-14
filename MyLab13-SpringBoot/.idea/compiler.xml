@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="W3D1-MVC" />
+        <module name="W3D3-Boot" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="W3D1-MVC" target="1.8" />
+      <module name="W3D2-SEC" target="1.8" />
+      <module name="W3D2-VAL" target="1.8" />
+      <module name="W3D3-Boot" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="W3D1-MVC" options="-endorseddirs &quot;$PROJECT_DIR$/target/endorsed&quot;" />
+      <module name="W3D2-SEC" options="-endorseddirs &quot;$PROJECT_DIR$/target/endorsed&quot;" />
+      <module name="W3D2-VAL" options="-endorseddirs &quot;$PROJECT_DIR$/target/endorsed&quot;" />
+      <module name="W3D3-Boot" options="-parameters" />
+    </option>
+  </component>
+</project>
